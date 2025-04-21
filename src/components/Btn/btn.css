@@ -1,0 +1,32 @@
+.btn-home{
+    width: max-content;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 15px;
+    border: none;
+    box-shadow: 2px 3px 10px #00000017,
+    3px 4px 15px #00000009;
+}
+
+html.dark{
+    .btn-home{
+        background-color: var(--background-component-dark);
+        color: #fff;
+    }
+    .btn-home svg{
+        stroke: #fff;
+    }
+}
+
+html.light{
+    .btn-home{
+        background-color: var(--background-component-light);
+        color: #000;
+    }
+
+    .btn-home svg{
+        stroke: #000;
+    }
+}

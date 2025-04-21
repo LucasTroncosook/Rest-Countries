@@ -1,0 +1,67 @@
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    & > .main-container{
+        width: 90%;
+        margin: 0 auto;
+        & > header{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            & > .search-name{
+                display: flex;
+                align-items: center;
+                padding: 8px 20px;
+                box-shadow: 2px 4px 10px #00000027;
+                & > input{
+                    border: none;
+                    background-color: transparent;
+                    padding-left: 10px;
+                    padding-right: 20px;
+                    &:focus-visible{
+                        outline: none;
+                    }
+                }
+            }
+        }
+        & > .container-cards{
+            margin-top: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            row-gap: 20px;
+        }
+    }
+}
+
+@media(width <= 580px){
+    .main{
+        & > .main-container{
+            & > .container-cards{
+                justify-content: center;
+            }
+            & > header{
+                flex-direction: column;
+                align-items: start;
+                row-gap: 20px;
+            }
+        }   
+    }
+}
+
+html.dark{
+    .main .main-container header .search-name{
+        background-color: var(--background-component-dark);
+    }
+    .main .main-container header .search-name svg{
+        stroke: #fff;
+    }
+    .main .main-container header .search-name input,
+    .main .main-container header .search-name input::placeholder{
+        color: #fff;
+        
+    }
+}
